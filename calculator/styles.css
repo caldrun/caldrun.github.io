@@ -1,0 +1,117 @@
+/********************
+Basic Styles
+********************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-weight: 300;
+    font-family: 'Roboto Mono', Helvetica, sans-serif;
+}
+
+/*centers content*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(230deg,rgb(220, 110, 175), rgb(150, 100, 200)); 
+}
+
+button {
+    overflow: visible;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    border: none;
+    padding: 1rem;
+    background-color:  rgb(50, 50, 50);
+}
+
+/********************
+Calculator Styles
+********************/
+
+.calculator {
+    box-shadow: 0 0 25px  rgb(50, 50, 50);
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+.calculator__display {
+    background-color: rgb(50, 50, 50);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.calculator__prev__input {
+    color: gray;
+    font-size: .8rem;
+    min-height: 1.4em;
+}
+
+.calculator__current__input {
+    font-size: 1.2rem;
+    min-height: 1.4em;
+}
+
+.calculator__keypad {
+    background-color:  rgb(80, 80, 80);
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(4, 80px);
+}
+
+.number,
+.decimal
+{
+    background: #fff;
+}
+
+.number:active,
+.decimal:active,
+.clear:active,
+.delete:active,
+.negate:active {
+    background: rgb(175, 175, 175);
+}
+
+.clear,
+.delete,
+.negate {
+    background: #c2c2c2;
+}
+
+.clear:active,
+.delete:active,
+.negate:active {
+    background: #868686;
+}
+
+.operator {
+    background: rgb(170, 190, 255);
+    color: #000;
+}
+
+.operator:active {
+    background: rgb(120, 140, 205);
+}
+
+.equal {
+   grid-column: span 2;
+   background-color: rgb(255, 115, 65);
+}
+
+.equal:active {
+    background-color: chocolate;
+}
